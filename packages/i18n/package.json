@@ -6,9 +6,5 @@
   "types": "index.ts",
   "files": [
     "i18n/**"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w"
-  }
+  ]
 }
