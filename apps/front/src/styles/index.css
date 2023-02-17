@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background-color: white;
+    color: black;
+}
+
+.react-select__control, .react-select__menu {
+    @apply bg-gray-50 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 !important;
+}
+
+.react-select__option {
+    @apply bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 !important;
+}
+
+.react-select__option:active,
+.react-select__option:hover {
+    @apply text-blue-900 bg-blue-100 !important;
+}
+
+.react-select__placeholder,
+.react-select__single-value {
+    @apply text-white !important;
+}
+
+.clerk-box {
+    @apply flex h-screen w-screen;
+}
+
+.clerk-box > div {
+    @apply m-auto;
+}
+
+.clerk-dashboard-box {
+    @apply flex h-full w-full;
+}
+
+.clerk-dashboard-box > div {
+    @apply m-auto;
+}

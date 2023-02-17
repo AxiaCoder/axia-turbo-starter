@@ -1,0 +1,1 @@
+{"version":3,"file":"delete.page.controller.d.ts","sourceRoot":"","sources":["delete.page.controller.ts"],"names":[],"mappings":"AASA,OAAO,EAAE,UAAU,EAAE,MAAM,cAAc,CAAC;AAK1C,MAAM,CAAC,OAAO,OAAO,oBAAoB;IAC3B,OAAO,CAAC,QAAQ,CAAC,UAAU;gBAAV,UAAU,EAAE,UAAU;IAKtC,OAAO,CAA4B,EAAE,KAAA,GAAG,OAAO,CAAC,IAAI,CAAC;CAOnE"}

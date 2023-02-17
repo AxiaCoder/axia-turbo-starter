@@ -1,0 +1,1 @@
+{"version":3,"file":"get-single.page.controller.d.ts","sourceRoot":"","sources":["get-single.page.controller.ts"],"names":[],"mappings":"AASA,OAAO,EAAE,QAAQ,EAAE,MAAM,cAAc,CAAC;AAGxC,OAAO,OAAO,MAAM,oCAAoC,CAAC;AAGzD,MAAM,CAAC,OAAO,OAAO,uBAAuB;IAC9B,OAAO,CAAC,QAAQ,CAAC,QAAQ;gBAAR,QAAQ,EAAE,QAAQ;IAKlC,OAAO,CAA4B,EAAE,KAAA,GAAG,OAAO,CAAC,OAAO,CAAC;CAGtE"}
