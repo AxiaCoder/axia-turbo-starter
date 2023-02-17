@@ -27,7 +27,7 @@ dist-ssr
 /test-results/
 /playwright-report/
 /playwright/.cache/
-/tests-example/
+/tests-examples/
 
 # env files
 .env

@@ -1,0 +1,6 @@
+{
+  "dashboard": "Welcome to React and react-i18next",
+  "test": {
+    "subtitle": "coucou je suis un sous titre"
+  }
+}
