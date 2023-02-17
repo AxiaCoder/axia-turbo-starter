@@ -4,7 +4,12 @@ import { AppService } from './app.service';
 import CmsModule from './cms/cms.module';
 import UserModule from './users/user.module';
 import * as path from 'path';
-import { AcceptLanguageResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
+import {
+  AcceptLanguageResolver,
+  HeaderResolver,
+  I18nModule,
+  QueryResolver,
+} from 'nestjs-i18n';
 
 @Module({
   imports: [
@@ -16,6 +21,7 @@ import { AcceptLanguageResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
       },
       resolvers: [
         { use: QueryResolver, options: ['lang'] },
+        new HeaderResolver(['x-custom-lang']),
         AcceptLanguageResolver,
       ],
     }),

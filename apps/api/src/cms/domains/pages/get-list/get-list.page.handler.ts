@@ -1,7 +1,7 @@
 import { QueryHandler, IQueryHandler } from '@nestjs/cqrs';
 import PagesRepository from '../../../infrastructure/repositories/pages.repository';
-import PageDto from '../../../libs/dtos/prisma/page.dto';
 import GetListPagesQuery from '../../../libs/queries/pages/get-list.query';
+import { Page } from '@axia/data';
 
 @QueryHandler(GetListPagesQuery)
 export default class GetListPageHandler
@@ -9,7 +9,7 @@ export default class GetListPageHandler
 {
   constructor(private pagesRepository: PagesRepository) {}
 
-  async execute(): Promise<PageDto[]> {
+  async execute(): Promise<Page[]> {
     return this.pagesRepository.list();
   }
 }

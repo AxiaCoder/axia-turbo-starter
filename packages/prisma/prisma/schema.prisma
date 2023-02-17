@@ -13,4 +13,6 @@ model pages {
   title      String
   content    String
   slug       String
+  reference  String?
+  locale     String?
 }

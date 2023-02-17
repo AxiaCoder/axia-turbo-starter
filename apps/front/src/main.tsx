@@ -23,7 +23,6 @@ i18n
       },
     },
     fallbackLng: "en",
-    debug: true,
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     },

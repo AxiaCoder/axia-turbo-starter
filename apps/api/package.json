@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@axia/db": "workspace:*",
-    "@axia/i18n": "workspace:*",
+    "@axia/data": "workspace:*",
     "@clerk/clerk-sdk-node": "^4.7.3",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",

@@ -10,10 +10,10 @@ import {
 } from '@nestjs/common';
 import { CommandBus } from '@nestjs/cqrs';
 import InputBodyPageDto from '../../../libs/dtos/page/input.body.page.dto';
-import PageDto from '../../../libs/dtos/prisma/page.dto';
 import UpdatePageCommand from '../../../libs/commands/pages/update.command';
 import { ClerkAuthGuard } from '../../../../shared/libs/guards/clerk-auth.guard';
 import { ClerkAdminGuard } from '../../../../shared/libs/guards/clerk-admin.guard';
+import { Page } from '@axia/data';
 
 @Controller('pages')
 export default class UpdatePageController {
@@ -25,7 +25,7 @@ export default class UpdatePageController {
   public async execute(
     @Param('id', ParseIntPipe) id,
     @Body() body: InputBodyPageDto,
-  ): Promise<PageDto> {
+  ): Promise<Page> {
     return this.commandBus.execute(
       new UpdatePageCommand({
         id,

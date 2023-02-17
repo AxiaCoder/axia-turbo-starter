@@ -13,6 +13,8 @@ import GetListPageHandler from './domains/pages/get-list/get-list.page.handler';
 import UpdatePageHandler from './domains/pages/update/update.page.handler';
 import DeletePageHandler from './domains/pages/delete/delete.page.handler';
 import CreatePageHandler from './domains/pages/create/create.page.handler';
+import GetByRefPageController from './domains/pages/get-by-ref/get-by-ref.page.controller';
+import GetByRefPageHandler from './domains/pages/get-by-ref/get-by-ref.page.handler';
 
 const NewsControllers = [];
 
@@ -22,6 +24,7 @@ const PageControllers = [
   GetListPageController,
   GetSinglePageController,
   UpdatePageController,
+  GetByRefPageController,
 ];
 
 const Controllers = [...NewsControllers, ...PageControllers];
@@ -34,6 +37,7 @@ const PageHandlers = [
   GetListPageHandler,
   GetSinglePageHandler,
   UpdatePageHandler,
+  GetByRefPageHandler,
 ];
 
 const Handlers = [...NewsHandlers, ...PageHandlers];

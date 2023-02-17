@@ -5,12 +5,10 @@ import {
   HttpStatus,
   Param,
   ParseIntPipe,
-  UseGuards,
 } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
-import JwtAuthGuard from '../../../../shared/libs/guards/jwt-auth.guard';
 import GetSinglePageQuery from '../../../libs/queries/pages/get-single.query';
-import PageDto from '../../../libs/dtos/prisma/page.dto';
+import { Page } from '@axia/data';
 
 @Controller('pages')
 export default class GetSinglePageController {
@@ -18,7 +16,7 @@ export default class GetSinglePageController {
 
   @Get(':id')
   @HttpCode(HttpStatus.OK)
-  public async execute(@Param('id', ParseIntPipe) id): Promise<PageDto> {
+  public async execute(@Param('id', ParseIntPipe) id): Promise<Page> {
     return this.queryBus.execute(new GetSinglePageQuery({ id }));
   }
 }
