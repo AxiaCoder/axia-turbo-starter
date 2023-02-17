@@ -117,6 +117,7 @@ importers:
       eslint: 7.32.0
       eslint-config-custom: workspace:*
       i18next: ^22.4.10
+      i18next-browser-languagedetector: ^7.0.1
       postcss: ^8.4.21
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -136,12 +137,13 @@ importers:
       '@axia/data': link:../../packages/interface
       '@axia/i18n': link:../../packages/i18n
       '@axia/ui': link:../../packages/ui
-      '@clerk/clerk-react': 4.11.2_e2ahcdagsdonc2lnwoylqhejci
+      '@clerk/clerk-react': 4.11.2_biqbaboplfbrettd7655fr4n2y
       '@clerk/localizations': 1.4.3_react@18.2.0
       '@hookform/resolvers': 2.9.11_react-hook-form@7.43.1
       '@tanstack/react-query': 4.24.6_biqbaboplfbrettd7655fr4n2y
       axios: 1.3.2
       i18next: 22.4.10
+      i18next-browser-languagedetector: 7.0.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-hook-form: 7.43.1_react@18.2.0
@@ -158,7 +160,7 @@ importers:
       '@types/react-dom': 18.0.10
       '@vitejs/plugin-react': 3.1.0_vite@4.1.1
       autoprefixer: 10.4.13_postcss@8.4.21
-      babel-loader: 8.3.0_la66t7xldg4uecmyawueag5wkm
+      babel-loader: 8.3.0_@babel+core@7.20.12
       eslint: 7.32.0
       eslint-config-custom: link:../../packages/eslint-config-custom
       postcss: 8.4.21
@@ -711,14 +713,14 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/clerk-react/4.11.2_e2ahcdagsdonc2lnwoylqhejci:
+  /@clerk/clerk-react/4.11.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-3qNznZOd8mX4Q5dHKdRMpVM/HrxDC6dWws+NJjcUg55zl+uPg7kVVDDGzaifLZyD94O8NP/Fqy9JJ0xU8eJkLQ==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
     dependencies:
-      '@clerk/shared': 0.11.2_e2ahcdagsdonc2lnwoylqhejci
+      '@clerk/shared': 0.11.2_biqbaboplfbrettd7655fr4n2y
       '@clerk/types': 3.27.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -753,7 +755,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@clerk/shared/0.11.2_e2ahcdagsdonc2lnwoylqhejci:
+  /@clerk/shared/0.11.2_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-aAb2DbspgBSbqVzyWND2vydmuGOMSWjQDL9GP1EkTJ9ScH/sRnJLFQRt7U16k8Q/w4kEh3THV9yL4FlJQ50tlw==}
     peerDependencies:
       react: 18.2.0
@@ -762,7 +764,6 @@ packages:
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-test-renderer: 18.2.0_react@18.2.0
     dev: false
 
   /@clerk/types/3.27.0:
@@ -2696,7 +2697,7 @@ packages:
       - supports-color
     dev: true
 
-  /babel-loader/8.3.0_la66t7xldg4uecmyawueag5wkm:
+  /babel-loader/8.3.0_@babel+core@7.20.12:
     resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==}
     engines: {node: '>= 8.9'}
     peerDependencies:
@@ -2708,7 +2709,6 @@ packages:
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.75.0
     dev: true
 
   /babel-plugin-istanbul/6.1.1:
@@ -4545,6 +4545,12 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
+  /i18next-browser-languagedetector/7.0.1:
+    resolution: {integrity: sha512-Pa5kFwaczXJAeHE56CHG2aWzFBMJNUNghf0Pm4SwSrEMps/PTKqW90EYWlIvhuYStf3Sn1K0vw+gH3+TLdkH1g==}
+    dependencies:
+      '@babel/runtime': 7.20.13
+    dev: false
+
   /i18next/22.4.10:
     resolution: {integrity: sha512-3EqgGK6fAJRjnGgfkNSStl4mYLCjUoJID338yVyLMj5APT67HUtWoqSayZewiiC5elzMUB1VEUwcmSCoeQcNEA==}
     dependencies:
@@ -6350,6 +6356,7 @@ packages:
 
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: true
 
   /react-refresh/0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
@@ -6399,27 +6406,6 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
-    dev: false
-
-  /react-shallow-renderer/16.15.0_react@18.2.0:
-    resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
-    peerDependencies:
-      react: ^16.0.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      object-assign: 4.1.1
-      react: 18.2.0
-      react-is: 18.2.0
-    dev: false
-
-  /react-test-renderer/18.2.0_react@18.2.0:
-    resolution: {integrity: sha512-JWD+aQ0lh2gvh4NM3bBM42Kx+XybOxCpgYK7F8ugAlpaTSnWsX+39Z4XkOykGZAHrjwwTZT3x3KxswVWxHPUqA==}
-    peerDependencies:
-      react: ^18.2.0
-    dependencies:
-      react: 18.2.0
-      react-is: 18.2.0
-      react-shallow-renderer: 16.15.0_react@18.2.0
-      scheduler: 0.23.0
     dev: false
 
   /react-toastify/9.1.1_biqbaboplfbrettd7655fr4n2y:

@@ -1,0 +1,8 @@
+{
+  "router": {
+    "notFound": {
+      "title": "404",
+      "description": "page non trouvée"
+    }
+  }
+}

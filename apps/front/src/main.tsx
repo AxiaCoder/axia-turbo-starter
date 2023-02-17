@@ -5,8 +5,10 @@ import { App } from "./screens/App";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { i18n as AxiaI18n } from "@axia/i18n";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     // the translations
@@ -20,9 +22,8 @@ i18n
         translation: AxiaI18n.fr,
       },
     },
-    lng: "en", // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
-
+    debug: true,
     interpolation: {
       escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     },

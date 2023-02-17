@@ -12,6 +12,7 @@ import { PublicRouter } from "../../components/layout/public-router.component";
 export const router: Router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <DefaultError />,
     children: [
       {
         path: "",
@@ -21,7 +22,6 @@ export const router: Router = createBrowserRouter([
       {
         path: "/",
         element: <Layout />,
-        errorElement: <DefaultError />,
         children: [
           {
             path: "",

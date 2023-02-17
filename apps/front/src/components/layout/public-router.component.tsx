@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { SignedOut, useUser } from "@clerk/clerk-react";
+import { Loader } from "@axia/ui";
 
 export const PublicRouter: React.FC = () => {
   const { user, isLoaded } = useUser();
@@ -12,7 +13,7 @@ export const PublicRouter: React.FC = () => {
     }
   }, [user]);
 
-  if (!isLoaded) return <div>Loading...</div>;
+  if (!isLoaded) return <Loader />;
 
   return (
     <SignedOut>

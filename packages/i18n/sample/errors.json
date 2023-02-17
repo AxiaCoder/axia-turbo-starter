@@ -1,0 +1,8 @@
+{
+  "router": {
+    "notFound": {
+      "title": "",
+      "description": ""
+    }
+  }
+}
