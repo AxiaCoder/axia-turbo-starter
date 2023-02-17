@@ -1,14 +1,13 @@
-import React from 'react';
-import { useRouteError } from 'react-router-dom';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const DefaultError: React.FC = () => {
-  const error = useRouteError() as Error;
+  const { t } = useTranslation();
 
   return (
     <>
-      <h1>Oops!</h1>
-      <p>Sorryyyy, an unexpected error has occurred.</p>
-      <p>{error.message}</p>
+      <h1>{t("errors.router.notFound.title")}</h1>
+      <p>{t("errors.router.notFound.description")}</p>
     </>
   );
 };

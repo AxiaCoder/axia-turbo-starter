@@ -1,6 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import axios from "axios";
-import { useUser } from "@clerk/clerk-react";
+import i18n from "i18next";
+import { i18n as AxiaI18n } from "@axia/i18n";
 
 export const initQueryClient = () =>
   new QueryClient({
@@ -18,12 +19,16 @@ export const initAxios = (user: string | null) => {
   axios.defaults.headers.post["Content-Type"] = "application/json";
   axios.interceptors.request.use(
     (config) => {
+      const lang = i18n.language;
       const token = localStorage.getItem("clerk-db-jwt");
       if (token) {
         config.headers.clerk_key = token;
       }
-      if (token) {
+      if (user) {
         config.headers.clerk_user = user;
+      }
+      if (lang) {
+        config.headers["x-custom-lang"] = AxiaI18n.convertToLocale(lang);
       }
       return config;
     },

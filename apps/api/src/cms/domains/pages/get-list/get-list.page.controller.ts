@@ -1,8 +1,8 @@
 import { Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
 
-import PageDto from '../../../libs/dtos/prisma/page.dto';
 import GetListPagesQuery from '../../../libs/queries/pages/get-list.query';
+import { Page } from '@axia/data';
 
 @Controller('pages')
 export default class GetListPageController {
@@ -10,7 +10,7 @@ export default class GetListPageController {
 
   @Get()
   @HttpCode(HttpStatus.OK)
-  public async execute(): Promise<PageDto[]> {
+  public async execute(): Promise<Page[]> {
     return this.queryBus.execute(new GetListPagesQuery());
   }
 }

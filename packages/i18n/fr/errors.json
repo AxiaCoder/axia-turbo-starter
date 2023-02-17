@@ -1,0 +1,18 @@
+{
+  "router": {
+    "notFound": {
+      "title": "404",
+      "description": "page non trouvée"
+    }
+  },
+  "http": {
+    "404": {
+      "title": "404",
+      "description": "Page non trouvée"
+    },
+    "500": {
+      "title": "500",
+      "description": "Internal server error"
+    }
+  }
+}

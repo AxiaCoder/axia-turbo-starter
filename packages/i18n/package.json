@@ -1,0 +1,10 @@
+{
+  "name": "@axia/i18n",
+  "version": "0.0.0",
+  "private": true,
+  "source": "index.ts",
+  "types": "index.ts",
+  "files": [
+    "i18n/**"
+  ]
+}

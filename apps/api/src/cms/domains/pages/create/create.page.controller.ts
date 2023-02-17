@@ -9,9 +9,9 @@ import {
 import { CommandBus } from '@nestjs/cqrs';
 import CreatePageInputDto from '../../../libs/dtos/page/create/input.dto';
 import CreatePageCommand from '../../../libs/commands/pages/create.command';
-import PageDto from '../../../libs/dtos/prisma/page.dto';
 import { ClerkAuthGuard } from '../../../../shared/libs/guards/clerk-auth.guard';
 import { ClerkAdminGuard } from '../../../../shared/libs/guards/clerk-admin.guard';
+import { Page } from '@axia/data';
 
 @Controller('pages')
 export default class CreatePageController {
@@ -20,7 +20,7 @@ export default class CreatePageController {
   @Post()
   @HttpCode(HttpStatus.OK)
   @UseGuards(ClerkAuthGuard, ClerkAdminGuard)
-  public async execute(@Body() body: CreatePageInputDto): Promise<PageDto> {
+  public async execute(@Body() body: CreatePageInputDto): Promise<Page> {
     return this.commandBus.execute(new CreatePageCommand(body));
   }
 }

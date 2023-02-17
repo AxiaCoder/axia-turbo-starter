@@ -1,14 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { ApiErrors } from "@axia/data";
-import { UserResource } from "@clerk/types";
 
-export const useGetMe = () =>
+export const useGetPageByRef = (ref: string) =>
   useQuery({
-    queryKey: ["user-me"],
-    queryFn: async (): Promise<UserResource> => {
+    queryKey: [`page-${ref}`, ref],
+    queryFn: async (): Promise<any> => {
       try {
-        const response = await axios.get("/users/me");
+        const response = await axios.get(`/pages-by-ref/${ref}`);
         return response.data;
       } catch (e) {
         throw new ApiErrors(e);
