@@ -4,5 +4,15 @@
       "title": "",
       "description": ""
     }
+  },
+  "http": {
+    "404": {
+      "title": "",
+      "description": ""
+    },
+    "500": {
+      "title": "",
+      "description": ""
+    }
   }
 }
