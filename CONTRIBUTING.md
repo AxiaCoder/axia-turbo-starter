@@ -93,7 +93,7 @@ You can find a `.env.example` in:
 - at the root of the project
 - `apps/api`
 - `apps/front`
-  (you need to setupe clerk first)
+  (you need to setup clerk first)
 - `package/database`
 
 ## Development workflow
