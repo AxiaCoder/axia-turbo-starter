@@ -8,6 +8,8 @@ import { PrivateRouter } from "../../components/layout/private-router.component"
 import { PrivatesRoute } from "./privates.route";
 import { UsersRoute } from "./users.route";
 import { PublicRouter } from "../../components/layout/public-router.component";
+import { routes } from "../../config/routes.config";
+import { Home } from "../../screens/website/home.screen";
 
 export const router: Router = createBrowserRouter([
   {
@@ -17,7 +19,13 @@ export const router: Router = createBrowserRouter([
       {
         path: "",
         element: <PublicRouter />,
-        children: [...UsersRoute],
+        children: [
+          {
+            path: routes.home,
+            element: <Home />,
+          },
+          ...UsersRoute,
+        ],
       },
       {
         path: "/",
