@@ -17,6 +17,7 @@
 - [Vite](https://vitejs.dev)
 - [Vitest](https://vitest.dev)
 - [Playwright](https://playwright.dev)
+- [Type-Fest](#type-fest)
 
 # Installation
 
@@ -87,3 +88,7 @@ Contain the shared tsconfig configuration for the project.
 
 ### UI
 All your shared components, hooks, and utils.
+
+### Type-Fest
+[Link to the library](https://github.com/sindresorhus/type-fest).
+Type-Fest is a collection of essential TypeScript types. It's used in the project to provide some types that are not provided by the typescript compiler.
