@@ -1,5 +1,12 @@
 {
   "dashboard": "Dashboard",
+  "homepage": {
+    "title": "Bienvenue sur Axia Turbo Starter",
+    "link": {
+      "dashboard": "Vers le Dashboard",
+      "login": "Vers le login"
+    }
+  },
   "user": {
     "myaccount": "Mon Compte"
   }

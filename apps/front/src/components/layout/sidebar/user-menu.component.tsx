@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineUser, AiOutlineLogout } from "react-icons/ai";
 import { SignOutButton } from "@clerk/clerk-react";
 import { routes } from "../../../config/routes.config";
@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 
 export const UserMenu: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
   return (
     <>
       <li>
@@ -22,7 +24,7 @@ export const UserMenu: React.FC = () => {
         <span className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 w-full h-full">
           <AiOutlineLogout />
           <span className="flex-1 ml-3 whitespace-nowrap">
-            <SignOutButton />
+            <SignOutButton signOutCallback={() => navigate(routes.home)} />
           </span>
         </span>
       </li>

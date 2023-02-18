@@ -1,5 +1,12 @@
 {
   "dashboard": "",
+  "homepage": {
+    "title": "",
+    "link": {
+      "dashboard": "",
+      "login": ""
+    }
+  },
   "user": {
     "myaccount": ""
   }
