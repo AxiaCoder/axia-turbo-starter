@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import { SignedIn, useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/clerk-react";
 import { routes } from "../../config/routes.config";
 import { Loader } from "@axia/ui";
 
@@ -9,16 +9,12 @@ export const PrivateRouter: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!user) {
+    if (!user && isLoaded) {
       navigate(routes.login);
     }
   }, [user]);
 
   if (!isLoaded) return <Loader />;
 
-  return (
-    <SignedIn>
-      <Outlet />
-    </SignedIn>
-  );
+  return <Outlet />;
 };
