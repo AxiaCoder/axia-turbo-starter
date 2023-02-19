@@ -1,16 +1,17 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Sidebar } from './sidebar/sidebar.component';
-import { Content } from './content.component';
+import React from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Sidebar } from "./sidebar/sidebar.component";
+import { Content } from "./content.component";
 
-export const Layout: React.FC = () => (
+interface ILayoutProps {
+  children: React.ReactNode;
+}
+
+export const Layout: React.FC<ILayoutProps> = ({ children }: ILayoutProps) => (
   <>
     <Sidebar />
-    <Content>
-      <Outlet />
-    </Content>
+    <Content>{children}</Content>
     <ToastContainer position="bottom-right" />
   </>
 );

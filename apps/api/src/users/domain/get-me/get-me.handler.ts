@@ -2,10 +2,19 @@ import { QueryHandler, IQueryHandler } from '@nestjs/cqrs';
 import GetMeQuery from '../../libs/queries/get-me.query';
 import 'dotenv/config';
 import clerk from '@clerk/clerk-sdk-node';
+import { User } from '@axia/data';
+import UsersRepository from '../../infrastructure/repositories/users.repository';
 
 @QueryHandler(GetMeQuery)
 export default class GetMeHandler implements IQueryHandler<GetMeQuery> {
-  async execute({ dto }: GetMeQuery): Promise<any> {
-    return clerk.users.getUser(dto.user);
+  constructor(private usersRepository: UsersRepository) {}
+  async execute({ dto }: GetMeQuery): Promise<User> {
+    const clerkUser = await clerk.users.getUser(dto.user);
+    const apiUser = await this.usersRepository.get(clerkUser.id);
+
+    return {
+      clerkUser,
+      apiUser,
+    };
   }
 }

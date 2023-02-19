@@ -1,17 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { CorePersistanceInterface } from '../../../../shared/infrastructures/interfaces/core.persistance.interface';
-import InputBodyPageDto from '../../../libs/dtos/page/input.body.page.dto';
 import PrismaService from '../../../../prisma.service';
-import { Page } from '@axia/data';
+import { Page, PageEditData, PageForm } from '@axia/data';
 import { I18nContext } from 'nestjs-i18n';
 
 @Injectable()
 export default class PagesPrismaRepository
-  implements CorePersistanceInterface<Page, InputBodyPageDto>
+  implements CorePersistanceInterface<Page, PageForm>
 {
   constructor(protected prisma: PrismaService) {}
 
-  async create(item: InputBodyPageDto): Promise<Page> {
+  async create(item: PageForm): Promise<Page> {
     const obDate = {
       created_at: new Date(),
     };
@@ -51,15 +50,12 @@ export default class PagesPrismaRepository
     return this.prisma.pages.findMany();
   }
 
-  update(item: InputBodyPageDto, id: number): Promise<Page> {
-    const obDate = {
-      updated_at: new Date(),
-    };
+  update(item: PageEditData, id: number): Promise<Page> {
     return this.prisma.pages.update({
       where: {
         id,
       },
-      data: { ...item, ...obDate },
+      data: item,
     });
   }
 }
