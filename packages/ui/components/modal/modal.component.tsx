@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 interface ModalProps {
   title: string;
   children: React.ReactNode;
   open: boolean;
   close: () => void;
+  action?: () => void;
+  actionLabel?: string;
 }
 
 export const ModalComponent: React.FC<ModalProps> = ({
@@ -12,6 +14,8 @@ export const ModalComponent: React.FC<ModalProps> = ({
   children,
   open,
   close,
+  action,
+  actionLabel,
 }: ModalProps) => {
   if (!open) return null;
 
@@ -34,6 +38,15 @@ export const ModalComponent: React.FC<ModalProps> = ({
                 >
                   Cancel
                 </button>
+                {action && (
+                  <button
+                    type="button"
+                    className="w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md outline-none border ring-offset-2 ring-indigo-600 focus:ring-2"
+                    onClick={() => action()}
+                  >
+                    {actionLabel}
+                  </button>
+                )}
               </div>
             </div>
           </div>

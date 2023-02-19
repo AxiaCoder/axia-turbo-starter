@@ -15,6 +15,8 @@ import DeletePageHandler from './domains/pages/delete/delete.page.handler';
 import CreatePageHandler from './domains/pages/create/create.page.handler';
 import GetByRefPageController from './domains/pages/get-by-ref/get-by-ref.page.controller';
 import GetByRefPageHandler from './domains/pages/get-by-ref/get-by-ref.page.handler';
+import UsersRepository from '../users/infrastructure/repositories/users.repository';
+import UsersPrismaRepository from '../users/infrastructure/persistance/prisma/users.prisma.repository';
 
 const NewsControllers = [];
 
@@ -42,9 +44,9 @@ const PageHandlers = [
 
 const Handlers = [...NewsHandlers, ...PageHandlers];
 
-const Repositories = [PagesRepository];
+const Repositories = [PagesRepository, UsersRepository];
 
-const SqlRepositories = [PagesPrismaRepository];
+const SqlRepositories = [PagesPrismaRepository, UsersPrismaRepository];
 
 const Services = [];
 

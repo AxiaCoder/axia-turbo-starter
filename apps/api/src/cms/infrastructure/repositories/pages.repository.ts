@@ -1,17 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { CorePersistanceInterface } from '../../../shared/infrastructures/interfaces/core.persistance.interface';
-import InputBodyPageDto from '../../libs/dtos/page/input.body.page.dto';
 import PagesPrismaRepository from '../persistance/prisma/pages.prisma.repository';
-import { Page } from '@axia/data';
+import { Page, PageEditData, PageForm } from '@axia/data';
 import { NotFoundException } from '../../../shared/libs/exceptions/not-found.exception';
 
 @Injectable()
 export default class PagesRepository
-  implements CorePersistanceInterface<Page, InputBodyPageDto>
+  implements CorePersistanceInterface<Page, PageForm>
 {
   constructor(protected pagesPrismaRepository: PagesPrismaRepository) {}
 
-  create(item: InputBodyPageDto): Promise<Page> {
+  create(item: PageForm): Promise<Page> {
     return this.pagesPrismaRepository.create(item);
   }
 
@@ -43,7 +42,7 @@ export default class PagesRepository
     return this.pagesPrismaRepository.list();
   }
 
-  update(item: InputBodyPageDto, id: number): Promise<Page> {
+  update(item: PageEditData, id: number): Promise<Page> {
     return this.pagesPrismaRepository.update(item, id);
   }
 }

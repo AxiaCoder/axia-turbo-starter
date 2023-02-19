@@ -9,6 +9,7 @@ import {
 import { QueryBus } from '@nestjs/cqrs';
 import GetMeQuery from '../../libs/queries/get-me.query';
 import { ClerkAuthGuard } from '../../../shared/libs/guards/clerk-auth.guard';
+import { User } from '@axia/data';
 
 @Controller('users')
 export default class GetMeController {
@@ -17,7 +18,7 @@ export default class GetMeController {
   @Get('me')
   @HttpCode(HttpStatus.OK)
   @UseGuards(ClerkAuthGuard)
-  public async execute(@Req() req): Promise<any> {
+  public async execute(@Req() req): Promise<User> {
     const user = req.headers.clerk_user;
 
     return this.queryBus.execute(

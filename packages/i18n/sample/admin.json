@@ -1,0 +1,40 @@
+{
+  "title": "",
+  "form": {
+    "button": {
+      "add": "",
+      "edit": ""
+    },
+    "delete": {
+      "title": "",
+      "message": "",
+      "action": ""
+    }
+  },
+  "table": {
+    "id": "",
+    "locale": "",
+    "createdAt": "",
+    "action": ""
+  },
+  "pages": {
+    "title": "",
+    "table": {
+      "title": "",
+      "slug": "",
+      "reference": ""
+    },
+    "form": {
+      "title": "",
+      "content": "",
+      "slug": "",
+      "reference": ""
+    },
+    "edit": {
+      "title": ""
+    },
+    "add": {
+      "title": ""
+    }
+  }
+}

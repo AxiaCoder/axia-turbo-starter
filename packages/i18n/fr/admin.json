@@ -1,0 +1,40 @@
+{
+  "title": "Administration",
+  "form": {
+    "button": {
+      "add": "Ajouter l'élément",
+      "edit": "Editer l'élément"
+    },
+    "delete": {
+      "title": "Supprimer la page : {{title}}",
+      "message": "Voulez vous vraiment supprimer cette page ?",
+      "action": "Confirmer la suppression"
+    }
+  },
+  "table": {
+    "id": "ID",
+    "locale": "Langue",
+    "createdAt": "Créé le",
+    "action": "Actions"
+  },
+  "pages": {
+    "title": "Gestion des pages",
+    "table": {
+      "title": "Nom de la page",
+      "slug": "Slug",
+      "reference": "Référence"
+    },
+    "form": {
+      "title": "Titre de la page",
+      "content": "Contenu de la page",
+      "slug": "Slug",
+      "reference": "Référence"
+    },
+    "edit": {
+      "title": "Editer une page: {{title}}"
+    },
+    "add": {
+      "title": "Créer une nouvelle page"
+    }
+  }
+}

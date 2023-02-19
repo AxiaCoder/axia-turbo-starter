@@ -1,6 +1,6 @@
-import InputBodyPageDto from '../input.body.page.dto';
+import { PageEditData } from '@axia/data';
 
 export default class UpdatePageInputDto {
   id: number;
-  item: InputBodyPageDto;
+  item: PageEditData;
 }
