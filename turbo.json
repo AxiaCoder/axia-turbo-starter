@@ -13,6 +13,9 @@
       "dependsOn": ["^db:generate"],
       "cache": false
     },
+    "storybook": {
+      "cache": false
+    },
     "db:push": {
       "cache": false
     },
