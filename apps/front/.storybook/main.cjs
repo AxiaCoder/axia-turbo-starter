@@ -18,6 +18,9 @@ module.exports = {
   ],
   "framework": "@storybook/react",
   "core": {
-    "builder": "webpack4"
+    "builder": "@storybook/builder-vite"
   },
+  "features": {
+    "storyStoreV7": true
+  }
 }
