@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Select from 'react-select';
-import { Controller } from 'react-hook-form';
+import Select from "react-select";
+import { Controller } from "react-hook-form";
 
-interface ITextInputProps {
+interface ISelectInputProps {
   id: string;
   label: string;
   opts: { value: string; label: string }[];
@@ -12,11 +12,11 @@ interface ITextInputProps {
   type?: string;
   placeholder?: string;
   max?: number;
-  control: any;
+  control?: any;
   informations?: string;
 }
 
-export const SelectField: React.FC<ITextInputProps> = ({
+export const SelectField: React.FC<ISelectInputProps> = ({
   id,
   label,
   name,
@@ -24,7 +24,7 @@ export const SelectField: React.FC<ITextInputProps> = ({
   control,
   opts,
   informations,
-}: ITextInputProps) => (
+}: ISelectInputProps) => (
   <>
     <label
       htmlFor={id}
@@ -32,22 +32,34 @@ export const SelectField: React.FC<ITextInputProps> = ({
     >
       {label}
     </label>
-    <Controller
-      name={name || id}
-      control={control}
-      rules={{ required }}
-      render={({ field, fieldState: { error } }) => (
-        <>
-          <Select
-            {...field}
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={opts}
-          />
-          {error && <p className="text-sm text-red-500">{error.message}</p>}
-        </>
-      )}
-    />
+    {control && (
+      <Controller
+        name={name || id}
+        control={control}
+        rules={{ required }}
+        render={({ field, fieldState: { error } }) => (
+          <>
+            <Select
+              {...field}
+              className="react-select-container"
+              classNamePrefix="react-select"
+              options={opts}
+            />
+            {error && <p className="text-sm text-red-500">{error.message}</p>}
+          </>
+        )}
+      />
+    )}
+    {!control && (
+      <>
+        <Select
+          name={name || id}
+          className="react-select-container"
+          classNamePrefix="react-select"
+          options={opts}
+        />
+      </>
+    )}
     {informations && (
       <p className="text-sm text-gray-500 dark:text-gray-400">{informations}</p>
     )}
