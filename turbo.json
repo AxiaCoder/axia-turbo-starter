@@ -4,13 +4,16 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": ["dist/**", "storybook-static/**"]
     },
     "lint": {
       "outputs": []
     },
     "dev": {
       "dependsOn": ["^db:generate"],
+      "cache": false
+    },
+    "storybook": {
       "cache": false
     },
     "db:push": {
