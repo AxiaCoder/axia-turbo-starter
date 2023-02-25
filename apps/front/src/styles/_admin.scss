@@ -1,9 +1,5 @@
-.button-link {
-  @apply p-2 mt-2 mb-2 inline-block text-gray-900 border hover:border-blue-500 hover:bg-blue-50;
-}
-
 table {
-  @apply table-auto w-full text-left;
+  @apply table-auto w-full text-left mt-2;
 
   tr {
     @apply border-b-2;

@@ -22,3 +22,19 @@ a {
     @apply text-xl font-bold;
   }
 }
+
+.loader {
+  @apply flex items-center justify-center h-screen w-full text-4xl text-indigo-600;
+}
+
+.icon-spin {
+  animation: fa-spin 2s infinite linear;
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}

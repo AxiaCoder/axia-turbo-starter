@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PageFormExceptLocale, PageSchema, SelectData } from "@axia/data";
 import { toast } from "react-toastify";
-import { BackButton, FormSubmit, TextInput } from "@axia/ui";
+import { BackButton, Button, TextInput } from "@axia/ui";
 import { routes } from "../../../config/routes.config";
 import { TextArea } from "@axia/ui/components/forms/inputs/textarea.component";
 import { useCreatePage } from "../../../hooks/pages/create-page.hook";
@@ -105,7 +105,11 @@ export const PagesAddScreen: React.FC = () => {
             }))}
           />
         </div>
-        <FormSubmit label={t("admin.form.button.add")} />
+        <Button
+          type="submit"
+          classType="success"
+          label={t("admin.form.button.add")}
+        />
       </form>
     </>
   );
