@@ -27,7 +27,7 @@ export const PagesScreen: React.FC = () => {
     <>
       <BackButton action={() => navigate(routes.admin.home)} />
       <h1>{t("admin.pages.title")}</h1>
-      <Link to={routes.admin.page.add} className="button-link">
+      <Link to={routes.admin.page.add} className="btn default">
         {t("admin.pages.add.title")}
       </Link>
       <table>

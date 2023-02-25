@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { PageFormExceptLocale, PageSchema } from "@axia/data";
 import { useUpdatePage } from "../../../hooks/pages/update-page.hook";
 import { toast } from "react-toastify";
-import { BackButton, FormSubmit, TextInput } from "@axia/ui";
+import { BackButton, Button, TextInput } from "@axia/ui";
 import { routes } from "../../../config/routes.config";
 import { TextArea } from "@axia/ui/components/forms/inputs/textarea.component";
 import { SelectField } from "@axia/ui/components/forms/inputs/select.component";
@@ -137,7 +137,11 @@ export const PagesEditScreen: React.FC = () => {
             }))}
           />
         </div>
-        <FormSubmit label={t("admin.form.button.edit")} />
+        <Button
+          type="submit"
+          classType="success"
+          label={t("admin.form.button.edit")}
+        />
       </form>
     </>
   );
