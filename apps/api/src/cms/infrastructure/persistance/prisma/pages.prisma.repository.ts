@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { CorePersistanceInterface } from '../../../../shared/infrastructures/interfaces/core.persistance.interface';
-import PrismaService from '../../../../prisma.service';
 import { Page, PageEditData, PageForm } from '@axia/data';
 import { I18nContext } from 'nestjs-i18n';
+import { CorePersistanceInterface } from '../../../../shared/infrastructures/interfaces/core.persistance.interface';
+import PrismaService from '../../../../prisma.service';
 
 @Injectable()
 export default class PagesPrismaRepository

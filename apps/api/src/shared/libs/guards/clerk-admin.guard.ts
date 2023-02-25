@@ -12,8 +12,8 @@ export class ClerkAdminGuard implements CanActivate {
     const request = context.switchToHttp().getRequest();
     const user = request.headers.clerk_user;
 
-    return this.usersRepository.hasRole(user, 'admin').then((hasRole) => {
-      return hasRole;
-    });
+    return this.usersRepository
+      .hasRole(user, 'admin')
+      .then((hasRole) => hasRole);
   }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
+import { Page, PageEditData, PageForm } from '@axia/data';
 import { CorePersistanceInterface } from '../../../shared/infrastructures/interfaces/core.persistance.interface';
 import PagesPrismaRepository from '../persistance/prisma/pages.prisma.repository';
-import { Page, PageEditData, PageForm } from '@axia/data';
 import { NotFoundException } from '../../../shared/libs/exceptions/not-found.exception';
 
 @Injectable()

@@ -1,7 +1,7 @@
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
+import { Page } from '@axia/data';
 import UpdatePageCommand from '../../../libs/commands/pages/update.command';
 import PagesRepository from '../../../infrastructure/repositories/pages.repository';
-import { Page } from '@axia/data';
 
 @CommandHandler(UpdatePageCommand)
 export default class UpdatePageHandler

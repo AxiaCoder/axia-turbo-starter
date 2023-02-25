@@ -7,9 +7,9 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
+import { User } from '@axia/data';
 import GetMeQuery from '../../libs/queries/get-me.query';
 import { ClerkAuthGuard } from '../../../shared/libs/guards/clerk-auth.guard';
-import { User } from '@axia/data';
 
 @Controller('users')
 export default class GetMeController {

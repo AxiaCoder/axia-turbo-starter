@@ -1,6 +1,6 @@
 {
   "name": "@axia/db",
-  "main": "./dist/index.js",
+  "main": "index.js",
   "source": "index.ts",
   "types": "index.ts",
   "files": [

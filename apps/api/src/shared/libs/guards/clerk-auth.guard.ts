@@ -20,15 +20,8 @@ export class ClerkAuthGuard implements CanActivate {
           (session) => session.id === client.lastActiveSessionId,
         );
 
-        if (currentUserSession.userId === user) {
-          return true;
-        }
-
-        return false;
+        return currentUserSession.userId === user;
       })
-      .catch((error) => {
-        console.log('error sur le middleware');
-        return false;
-      });
+      .catch(() => false);
   }
 }
