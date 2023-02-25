@@ -1,0 +1,39 @@
+.modal-box {
+  @apply fixed inset-0 z-10 overflow-y-auto;
+
+  .modal-background {
+    @apply fixed inset-0 w-full h-full bg-black opacity-40;
+  }
+
+  .modal-content {
+    @apply flex items-center min-h-screen px-4 py-8;
+
+    .modal-body {
+      @apply relative p-4 mx-auto bg-white rounded-md shadow-lg;
+
+      .modal-card {
+        @apply mt-3;
+
+        .modal-card-title {
+          @apply text-3xl font-bold leading-6 text-gray-900 text-center border-b-4 pb-4 mb-4;
+        }
+
+        .modal-card-content {
+          @apply mt-2 text-center sm:ml-4 sm:text-left;
+        }
+
+        .modal-card-footer {
+          @apply items-center gap-2 mt-3 sm:flex;
+
+          button, a {
+            @apply w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md outline-none border ring-offset-2 ring-indigo-600 focus:ring-2;
+
+            &.danger{
+                @apply bg-red-500 hover:bg-red-600 text-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

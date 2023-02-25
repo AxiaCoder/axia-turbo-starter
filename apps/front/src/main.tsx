@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/index.css";
+import "./styles/main.scss";
 import { App } from "./screens/App";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";

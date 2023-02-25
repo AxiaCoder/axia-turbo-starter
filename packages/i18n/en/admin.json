@@ -28,7 +28,8 @@
       "title": "Title",
       "content": "Content",
       "slug": "Slug",
-      "reference": "Reference"
+      "reference": "Reference",
+      "locale": "Language"
     },
     "edit": {
       "title": "Page Edition: {{title}}"

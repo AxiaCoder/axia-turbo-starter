@@ -26,12 +26,7 @@ export const SelectField: React.FC<ISelectInputProps> = ({
   informations,
 }: ISelectInputProps) => (
   <>
-    <label
-      htmlFor={id}
-      className="block mb-2 text-sm font-medium text-gray-900"
-    >
-      {label}
-    </label>
+    <label htmlFor={id}>{label}</label>
     {control && (
       <Controller
         name={name || id}
@@ -45,7 +40,7 @@ export const SelectField: React.FC<ISelectInputProps> = ({
               classNamePrefix="react-select"
               options={opts}
             />
-            {error && <p className="text-sm text-red-500">{error.message}</p>}
+            {error && <p className="input-errors">{error.message}</p>}
           </>
         )}
       />
@@ -60,8 +55,6 @@ export const SelectField: React.FC<ISelectInputProps> = ({
         />
       </>
     )}
-    {informations && (
-      <p className="text-sm text-gray-500 dark:text-gray-400">{informations}</p>
-    )}
+    {informations && <p className="informations">{informations}</p>}
   </>
 );

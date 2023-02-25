@@ -1,0 +1,37 @@
+.react-select {
+  &__control, &__menu {
+    @apply bg-gray-50 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 #{!important};
+  }
+
+  &__option {
+    @apply bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 #{!important};
+
+    &:active, &:hover {
+      @apply text-blue-900 bg-blue-100 #{!important};
+    }
+  }
+
+  &__placeholder, &__single-value {
+    @apply text-white #{!important};
+  }
+}
+
+.form-group {
+  @apply mb-6;
+}
+
+label {
+  @apply block mb-2 text-sm font-medium text-gray-900;
+}
+
+.informations {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.input-errors {
+  @apply text-sm text-red-500;
+}
+
+textarea, input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}

@@ -10,16 +10,13 @@ export const Sidebar: React.FC = () => {
   const { user } = useUser();
 
   return (
-    <aside className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
-      <div className="flex flex-col justify-between h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+    <aside className="sidebar">
+      <div className="content dark">
         <ul className="">
           <li>
-            <Link
-              to={routes.dashboard}
-              className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-            >
+            <Link to={routes.dashboard} className="menu-link">
               <AiTwotoneHome />
-              <span className="ml-3">Dashboard</span>
+              <span>Dashboard</span>
             </Link>
           </li>
         </ul>

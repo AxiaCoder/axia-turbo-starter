@@ -1,0 +1,15 @@
+.clerk-box {
+  @apply flex h-screen w-screen;
+
+  > div {
+    @apply m-auto;
+  }
+}
+
+.clerk-dashboard-box {
+  @apply flex h-full w-full;
+
+  > div {
+    @apply m-auto;
+  }
+}

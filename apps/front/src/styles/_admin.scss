@@ -1,0 +1,31 @@
+.button-link {
+  @apply p-2 mt-2 mb-2 inline-block text-gray-900 border hover:border-blue-500 hover:bg-blue-50;
+}
+
+table {
+  @apply table-auto w-full text-left;
+
+  tr {
+    @apply border-b-2;
+  }
+
+  td, th {
+    @apply p-2;
+  }
+
+  .action {
+    @apply flex;
+
+    a, button {
+      @apply pl-2 pr-2;
+
+      &.edit {
+        @apply text-green-500;
+      }
+
+      &.delete {
+        @apply text-red-500;
+      }
+    }
+  }
+}

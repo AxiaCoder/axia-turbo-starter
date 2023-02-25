@@ -6,7 +6,6 @@ import { UserContext } from "./private-router.component";
 export const AdminRouter: React.FC = () => {
   const navigate = useNavigate();
   const { user } = React.useContext(UserContext);
-  console.log("AdminRouter", user);
 
   useEffect(() => {
     if (!user || user.apiUser.role !== "admin") {

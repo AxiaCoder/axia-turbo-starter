@@ -1,0 +1,9 @@
+.card-container {
+  @apply p-6 rounded-lg shadow bg-gray-800 border-gray-700 text-white;
+
+  .card-title {
+    @apply mb-2 text-2xl font-bold tracking-tight;
+  }
+
+  .card-content {}
+}

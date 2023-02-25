@@ -19,14 +19,10 @@ export const Home: React.FC = () => {
         </>
       )}
       <SignedIn>
-        <Link to={routes.dashboard} className="text-blue-500">
-          {t("front.homepage.link.dashboard")}
-        </Link>
+        <Link to={routes.dashboard}>{t("front.homepage.link.dashboard")}</Link>
       </SignedIn>
       <SignedOut>
-        <Link to={routes.login} className="text-blue-500">
-          {t("front.homepage.link.login")}
-        </Link>
+        <Link to={routes.login}>{t("front.homepage.link.login")}</Link>
       </SignedOut>
     </>
   );
