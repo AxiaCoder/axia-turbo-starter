@@ -1,8 +1,8 @@
 import { Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
 
-import GetListPagesQuery from '../../../libs/queries/pages/get-list.query';
 import { Page } from '@axia/data';
+import GetListPagesQuery from '../../../libs/queries/pages/get-list.query';
 
 @Controller('pages')
 export default class GetListPageController {

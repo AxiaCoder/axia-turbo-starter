@@ -7,10 +7,10 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { CommandBus } from '@nestjs/cqrs';
+import { Page, PageForm } from '@axia/data';
 import CreatePageCommand from '../../../libs/commands/pages/create.command';
 import { ClerkAuthGuard } from '../../../../shared/libs/guards/clerk-auth.guard';
 import { ClerkAdminGuard } from '../../../../shared/libs/guards/clerk-admin.guard';
-import { Page, PageForm } from '@axia/data';
 
 @Controller('pages')
 export default class CreatePageController {

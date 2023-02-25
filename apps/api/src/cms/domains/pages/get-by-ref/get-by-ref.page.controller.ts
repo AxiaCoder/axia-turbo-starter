@@ -1,7 +1,7 @@
 import { Controller, Get, HttpCode, HttpStatus, Param } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
-import GetByRefQuery from '../../../libs/queries/pages/get-by-ref.query';
 import { Page } from '@axia/data';
+import GetByRefQuery from '../../../libs/queries/pages/get-by-ref.query';
 
 @Controller('pages-by-ref')
 export default class GetByRefPageController {

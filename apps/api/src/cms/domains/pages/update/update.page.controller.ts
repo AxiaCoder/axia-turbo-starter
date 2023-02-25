@@ -9,10 +9,10 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { CommandBus } from '@nestjs/cqrs';
+import { Page, PageEditData } from '@axia/data';
 import UpdatePageCommand from '../../../libs/commands/pages/update.command';
 import { ClerkAuthGuard } from '../../../../shared/libs/guards/clerk-auth.guard';
 import { ClerkAdminGuard } from '../../../../shared/libs/guards/clerk-admin.guard';
-import { Page, PageEditData } from '@axia/data';
 
 @Controller('pages')
 export default class UpdatePageController {

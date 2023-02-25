@@ -7,8 +7,8 @@ import {
   ParseIntPipe,
 } from '@nestjs/common';
 import { QueryBus } from '@nestjs/cqrs';
-import GetSinglePageQuery from '../../../libs/queries/pages/get-single.query';
 import { Page } from '@axia/data';
+import GetSinglePageQuery from '../../../libs/queries/pages/get-single.query';
 
 @Controller('pages')
 export default class GetSinglePageController {

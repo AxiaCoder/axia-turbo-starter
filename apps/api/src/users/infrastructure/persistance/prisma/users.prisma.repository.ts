@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import PrismaService from '../../../../prisma.service';
 import { ApiUser } from '@axia/data';
+import PrismaService from '../../../../prisma.service';
 
 @Injectable()
 export default class UsersPrismaRepository {

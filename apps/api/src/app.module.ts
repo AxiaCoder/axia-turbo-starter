@@ -1,8 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import CmsModule from './cms/cms.module';
-import UserModule from './users/user.module';
 import * as path from 'path';
 import {
   AcceptLanguageResolver,
@@ -10,6 +6,10 @@ import {
   I18nModule,
   QueryResolver,
 } from 'nestjs-i18n';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import CmsModule from './cms/cms.module';
+import UserModule from './users/user.module';
 
 @Module({
   imports: [
