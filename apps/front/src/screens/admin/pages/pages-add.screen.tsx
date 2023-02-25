@@ -56,7 +56,7 @@ export const PagesAddScreen: React.FC = () => {
       <BackButton action={() => navigate(routes.admin.page.home)} />
       <h1>{t("admin.pages.add.title")}</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-6">
+        <div className="form-group">
           <TextInput
             label={t("admin.pages.form.title")}
             id="title"
@@ -65,7 +65,7 @@ export const PagesAddScreen: React.FC = () => {
             control={control}
           />
         </div>
-        <div className="mb-6">
+        <div className="form-group">
           <TextArea
             label={t("admin.pages.form.content")}
             id="content"
@@ -74,7 +74,7 @@ export const PagesAddScreen: React.FC = () => {
             control={control}
           />
         </div>
-        <div className="mb-6">
+        <div className="form-group">
           <TextInput
             label={t("admin.pages.form.slug")}
             id="slug"
@@ -83,7 +83,7 @@ export const PagesAddScreen: React.FC = () => {
             control={control}
           />
         </div>
-        <div className="mb-6">
+        <div className="form-group">
           <TextInput
             label={t("admin.pages.form.reference")}
             id="reference"
@@ -92,7 +92,7 @@ export const PagesAddScreen: React.FC = () => {
             control={control}
           />
         </div>
-        <div className="mb-6">
+        <div className="form-group">
           <SelectField
             label={t("admin.pages.form.locale")}
             id="locale"

@@ -1,0 +1,27 @@
+.sidebar {
+  @apply fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0;
+
+  .content {
+    @apply flex flex-col justify-between h-full px-3 py-4 overflow-y-auto;
+
+    &.dark {
+      @apply bg-gray-50 dark:bg-gray-800;
+    }
+  }
+
+  .menu-link {
+    @apply flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700;
+
+    span {
+      @apply ml-3;
+    }
+  }
+
+  .logout {
+    @apply flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 w-full h-full;
+
+    span {
+      @apply flex-1 ml-3 whitespace-nowrap;
+    }
+  }
+}

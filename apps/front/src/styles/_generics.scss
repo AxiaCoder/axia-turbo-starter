@@ -1,0 +1,24 @@
+html {
+  background-color: white;
+  color: black;
+}
+
+a {
+  @apply text-blue-500 hover:text-blue-900;
+}
+
+.back-button {
+  @apply mr-4;
+}
+
+.console-content {
+  @apply p-4 sm:ml-64 h-screen;
+
+  h1 {
+    @apply text-2xl text-center font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+}

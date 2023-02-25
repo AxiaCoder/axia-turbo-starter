@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '_generics.scss';
+@import '_sidebar.scss';
+@import '_forms.scss';
+@import '_clerk.scss';
+
+@import 'components/modal';
+@import 'components/card';
+@import 'components/button';
+
+@import '_admin.scss';

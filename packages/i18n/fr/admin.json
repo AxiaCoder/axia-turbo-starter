@@ -28,7 +28,8 @@
       "title": "Titre de la page",
       "content": "Contenu de la page",
       "slug": "Slug",
-      "reference": "Référence"
+      "reference": "Référence",
+      "locale": "Langue"
     },
     "edit": {
       "title": "Editer une page: {{title}}"

@@ -18,3 +18,15 @@ export const SubmitButton = Template.bind({});
 SubmitButton.args = {
   label: "Submit",
 };
+
+export const SubmitButtonSuccess = Template.bind({});
+SubmitButtonSuccess.args = {
+  label: "Submit",
+  type: "success",
+};
+
+export const SubmitButtonDanger = Template.bind({});
+SubmitButtonDanger.args = {
+  label: "Submit",
+  type: "danger",
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface IContentProps {
   children: React.ReactNode;
@@ -6,6 +6,4 @@ interface IContentProps {
 
 export const Content: React.FC<IContentProps> = ({
   children,
-}: IContentProps) => (
-  <section className="p-4 sm:ml-64 h-screen">{children}</section>
-);
+}: IContentProps) => <section className="console-content">{children}</section>;

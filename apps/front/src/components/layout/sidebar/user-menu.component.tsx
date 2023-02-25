@@ -17,28 +17,22 @@ export const UserMenu: React.FC = () => {
     <>
       {user && user.apiUser.role === "admin" && (
         <li>
-          <Link
-            to={routes.admin.home}
-            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-          >
+          <Link to={routes.admin.home} className="menu-link">
             <RiAdminLine />
-            <span className="ml-3">{t("admin.title")}</span>
+            <span>{t("admin.title")}</span>
           </Link>
         </li>
       )}
       <li>
-        <Link
-          to={routes.account}
-          className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-        >
+        <Link to={routes.account} className="menu-link">
           <AiOutlineUser />
-          <span className="ml-3">{t("front.user.myaccount")}</span>
+          <span>{t("front.user.myaccount")}</span>
         </Link>
       </li>
       <li>
-        <span className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 w-full h-full">
+        <span className="logout">
           <AiOutlineLogout />
-          <span className="flex-1 ml-3 whitespace-nowrap">
+          <span>
             <SignOutButton signOutCallback={() => navigate(routes.home)} />
           </span>
         </span>

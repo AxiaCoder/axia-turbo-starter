@@ -11,7 +11,7 @@ export const BackButton: React.FC<IBackButton> = ({
   label,
 }: IBackButton) => {
   return (
-    <button className="mr-4" type="button" onClick={action}>
+    <button type="button" onClick={action}>
       {label ?? <AiOutlineArrowLeft />}
     </button>
   );

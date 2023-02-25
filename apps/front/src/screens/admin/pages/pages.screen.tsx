@@ -27,44 +27,38 @@ export const PagesScreen: React.FC = () => {
     <>
       <BackButton action={() => navigate(routes.admin.home)} />
       <h1>{t("admin.pages.title")}</h1>
-      <Link
-        to={routes.admin.page.add}
-        className="p-2 mt-2 mb-2 inline-block border"
-      >
+      <Link to={routes.admin.page.add} className="button-link">
         {t("admin.pages.add.title")}
       </Link>
-      <table className="table-auto w-full text-left">
+      <table>
         <thead>
-          <tr className="border-b-2">
-            <th className="p-2">{t("admin.table.id")}</th>
-            <th className="p-2">{t("admin.pages.table.title")}</th>
-            <th className="p-2">{t("admin.pages.table.slug")}</th>
-            <th className="p-2">{t("admin.pages.table.reference")}</th>
-            <th className="p-2">{t("admin.table.locale")}</th>
-            <th className="p-2">{t("admin.table.createdAt")}</th>
-            <th className="p-2">{t("admin.table.action")}</th>
+          <tr>
+            <th>{t("admin.table.id")}</th>
+            <th>{t("admin.pages.table.title")}</th>
+            <th>{t("admin.pages.table.slug")}</th>
+            <th>{t("admin.pages.table.reference")}</th>
+            <th>{t("admin.table.locale")}</th>
+            <th>{t("admin.table.createdAt")}</th>
+            <th>{t("admin.table.action")}</th>
           </tr>
         </thead>
         <tbody>
           {pages?.map((page) => (
             <tr key={page.id}>
-              <td className="p-2">{page.id}</td>
-              <td className="p-2">{page.title}</td>
-              <td className="p-2">{page.slug}</td>
-              <td className="p-2">{page.reference}</td>
-              <td className="p-2">{page.locale}</td>
-              <td className="p-2">{formatDate(page.created_at)}</td>
-              <td className="p-2 flex">
+              <td>{page.id}</td>
+              <td>{page.title}</td>
+              <td>{page.slug}</td>
+              <td>{page.reference}</td>
+              <td>{page.locale}</td>
+              <td>{formatDate(page.created_at)}</td>
+              <td className="action">
                 <Link
                   to={pathFormat(routes.admin.page.edit, { id: page.id })}
-                  className="pl-2 pr-2"
+                  className="edit"
                 >
                   <AiFillEdit />
                 </Link>
-                <button
-                  onClick={() => handleDelete(page)}
-                  className="pl-2 pr-2 text-red-500"
-                >
+                <button onClick={() => handleDelete(page)} className="delete">
                   <AiFillDelete />
                 </button>
               </td>
