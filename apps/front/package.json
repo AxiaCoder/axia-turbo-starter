@@ -10,7 +10,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "storybook": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "e2e": "playwright test --project=chromium"
   },
   "dependencies": {
     "@axia/data": "workspace:*",
